@@ -1,0 +1,54 @@
+5star.com.ua
+1 - http://www.5star.com.ua/category/gps-navigatory/
+2 - http://www.5star.com.ua/category/gps-navigatory/offset8/
+3 - http://www.5star.com.ua/category/gps-navigatory/offset16/
+4 - http://www.5star.com.ua/category/gps-navigatory/offset24/	
+
+http://5star.com.ua/category/audiovideo-tehnika/
+http://5star.com.ua/category/audiovideo-tehnika/offset8/
+http://5star.com.ua/category/audiovideo-tehnika/offset16/
+http://5star.com.ua/category/audiovideo-tehnika/offset24/
+
+
+=============================
+1 - http://www.5star.com.ua/category/gps-navigatory/
+2 - http://www.5star.com.ua/category/gps-navigatory/offset10/
+3 - http://www.5star.com.ua/category/gps-navigatory/offset20/
+4 - http://www.5star.com.ua/category/gps-navigatory/offset30/	
+
+1 - http://www.5star.com.ua/category/audiovideo-tehnika/
+2 - http://www.5star.com.ua/category/audiovideo-tehnika/offset10/
+3 - http://www.5star.com.ua/category/audiovideo-tehnika/offset20/
+4 - http://www.5star.com.ua/category/audiovideo-tehnika/offset30/	
+
+=============================
+www.all-shop.com.ua
+1 - http://www.all-shop.com.ua/?PAGE=list&CATEGORY=56952
+2 - http://www.all-shop.com.ua/?PAGE=list&p=2&CATEGORY=56952
+3 - http://www.all-shop.com.ua/?PAGE=list&p=3&CATEGORY=56952
+4 - http://www.all-shop.com.ua/?PAGE=list&p=4&CATEGORY=56952
+
+http://www.all-shop.com.ua/?PAGE=list&CATEGORY=569
+http://www.all-shop.com.ua/?PAGE=list&p=2&CATEGORY=569
+http://www.all-shop.com.ua/?PAGE=list&p=3&CATEGORY=569
+http://www.all-shop.com.ua/?PAGE=list&p=4&CATEGORY=569
+
+http://www.all-shop.com.ua/?PAGE=list&CATEGORY=57
+
+==============================
+http://www.590.com.ua
+http://www.590.com.ua/catalog/cat/25
+http://www.590.com.ua/catalog/cat/25/page/2
+http://www.590.com.ua/catalog/cat/25/page/3
+
+http://www.590.com.ua/catalog/cat/49
+http://www.590.com.ua/catalog/cat/49/page/2
+http://www.590.com.ua/catalog/cat/49/page/3
+==============================
+
+
+Общий вид поиска секций:
+http://xxx.yyy/section_id/zzzzzz
+http://xxx.yyy/section=section_id/zzzzz
+http://xxx.yyy/another=valu1&section=section_id
+http://xxx.yyy/another=valu1&section=section_id&temp=value2

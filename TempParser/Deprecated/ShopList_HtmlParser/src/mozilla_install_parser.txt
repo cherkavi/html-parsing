@@ -1,0 +1,30 @@
+http://mozillaparser.sourceforge.net/quickstart.html
+
+Path:
+D:\java_lib\htmlparser\MozillaParser-v-0-3-0\dist\windows\;
+D:\java_lib\htmlparser\MozillaParser-v-0-3-0\dist\windows\mozilla\;
+D:\java_lib\htmlparser\MozillaParser-v-0-3-0\dist\windows\mozilla\components\;
+
+
+Three (more or less) easy steps to integrate Mozilla parser into your code :
+
+   1. Download And include the source code
+
+   2. Insert both the dist/bin and the dist/bin/components directories to the right enviroment variable.
+
+      On windows it is PATH variable and you can manipulate it threw Start->ControlPanel->System->Advanced->Enviroment Vairables
+
+      On Linux you should add it to LD_LIBRARY_PATH
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/dist/bin:/path/to/dist/bin/components
+
+      On MacOSX you should add it to DYLD_LIBRARY_PATH
+      export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/path/to/dist/bin:/path/to/dist/bin/components 
+
+      I know it's a pain , but it's the only way I managed to do it. if someone happens to be smarter than I , please send me a note.
+
+   3. Place the MozillaParser library file (dll/so/dynlib) in your java runtime library path , you can use the -Djava.library.path=... for this.
+
+   4. Use this code to initialize the parser :
+      // let's say that c:\dapper\mozilla\dist\bin is where the mozilla components directory is , this initialized the parser libraries :
+      MozillaParser.init(null , "C:\\dapper\\mozilla\\dist\\bin");
+      Document domDocument =new MozillaParser().parse("<html>Hello world!</html>"); 
