@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.cherkashyn.vitalii.whore</groupId>
+  <artifactId>interfaces</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>interfaces</name>
+  <description>interfaces for all components ( each component provided one of this interface )</description>
+  
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+    <build>
+        <plugins>
+<!--
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Export-Package>
+				com.cherkashyn.vitalii.whore.domain*,
+				com.cherkashyn.vitalii.whore.exceptions*,
+				com.cherkashyn.vitalii.whore.interfaces.elementsaver*,
+				com.cherkashyn.vitalii.whore.interfaces.executor*,
+				com.cherkashyn.vitalii.whore.interfaces.imagesaver*,
+				com.cherkashyn.vitalii.whore.interfaces.parsercontroller*,
+				com.cherkashyn.vitalii.whore.interfaces.reestr*,
+				com.cherkashyn.vitalii.whore.interfaces.spider*;version=${project.version}
+                        </Export-Package>
+                        <Import-Package>
+                            *
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+-->
+        </plugins>
+    </build>
+</project>
