@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+.temp_border{
+	/* border: solid thin black; */
+}
+.header{
+	height: 50px;
+}
+.find{
+	height:60px;
+}
+.result{
+	min-height: 500px;
+	margin-top: 80px;
+}
+.footer{
+	height: 100px;
+}
+
+
+
+.calc_hrn{
+	color:red;
+}
+
+.calc_usd{
+	color:red;
+}
