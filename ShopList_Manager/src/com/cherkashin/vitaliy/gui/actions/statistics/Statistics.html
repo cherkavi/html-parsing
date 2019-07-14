@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<style type="text/css">
+			.list_header{
+				background: gray;
+				border: thin black solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<form wicket:id="form_back" >
+				<input type="submit" wicket:id="button_back" value="back to list of action" />
+			</form>
+		</div>
+		<table style="border:solid black thin;">
+			<tr>
+				<td colspan="2" align="center"> <wicket:message key="title" /> </td>
+			</tr>
+			<tr>
+				<td> <wicket:message key="record_count" /> </td>
+				<td wicket:id="record_count" > </td>
+			</tr>
+			<tr>
+				<td> <wicket:message key="parser_position" /> </td>
+				<td wicket:id="parser_position" > </td>
+			</tr>
+			<tr>
+				<td> <wicket:message key="parser_all" /> </td>
+				<td wicket:id="parser_all" > </td>
+			</tr>
+		</table>
+		<table style="border:solid black thin;">
+			<tr>
+				<th colspan="2" align="center"> <wicket:message key="error_parsers" class="list_header" /> </th>
+			</tr>
+			<tr>
+				<th>Start page</th>
+				<th>ParseRecord count</th>
+			</tr>
+			<tr wicket:id="list_error_parsers" >
+				<td wicket:id="error_parser_start_page" >  </td>
+				<td wicket:id="error_parser_count" > </td>
+			</tr>
+		</table>
+		<table style="border:solid black thin;">
+			<tr>
+				<th colspan="2" align="center"> <wicket:message key="logger_error" class="list_header" /> </th>
+			</tr>
+			<tr>
+				<th>Start page</th>
+				<th>Parse Record count</th>
+				<th>Logger count</th>
+			</tr>
+			<tr wicket:id="list_logger_error" >
+				<td> 
+					<a wicket:id="logger_error_link">
+						<span wicket:id="logger_error_start_page" />
+					</a> 
+				</td>
+				<td> <span wicket:id="record_count" /> </td>
+				<td> <span wicket:id="logger_error_count" /> </td>
+			</tr>
+		</table>
+		
+		<table border="1">
+			<tr>
+				<th colspan="3" align="center" class="list_header" >
+					<wicket:message key="parser_result" />
+				</th>
+			</tr>
+			<tr>
+				<th><wicket:message key="parse_result_1" /> </th>
+				<th><wicket:message key="parse_result_2" /> </th>
+				<th><wicket:message key="parse_result_3" /> </th>
+			</tr>
+			<tr wicket:id="result_list">
+				<td> <span wicket:id="parse_result_data_1" /></td>
+				<td align="center"> <span wicket:id="parse_result_data_2" /></td>
+				<td align="right"> <span wicket:id="parse_result_data_3" /></td>
+			</tr>
+		</table>
+		<div align="right">
+		</div>
+		<form wicket:id="form_restart">
+			<input type="submit" wicket:id="button_restart" wicket:message="value:button_restart_caption"/>
+		</form>
+	</body>
+</html>

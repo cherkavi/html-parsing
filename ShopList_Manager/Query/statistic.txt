@@ -1,0 +1,64 @@
+====================
+
+   ќтобразить текущее состо€ние парсера
+--------------------
+select current_action.*
+from current_action
+left join parse_session on parse_session.id=current_action.id_parse_session
+where current_action.id_actions=12
+
+====================
+
+    ол-во записей, ( распарсенные ) в текущий момент в базе
+--------------------
+select count(*) from parse_record
+====================
+
+   ѕоказывает соотношение "сделано/осталось" всего есть в текущем current_action элементов
+--------------------
+select (select count(*) from current_action inner join parse_session on current_action.id_parse_session=parse_session.id) current,
+(select count(*) from current_action left join parse_session on current_action.id_parse_session=parse_session.id) amount
+====================
+
+
+   ќтобразить статистику "распарсено с ошибками/всего"
+--------------------
+select
+(select count(*)
+from current_action
+inner join parse_session on current_action.id_parse_session=parse_session.id
+and parse_session.id_parse_result=1),
+(select count(*) from current_action)
+====================
+
+   –аспарсенные с ошибками магазины ( то есть произошли критические ошибки, и парсер был остановлен )
+--------------------
+select current_action.id, parse_session.id, shop_list.start_page,
+(select count(*) from parse_record where id_session=parse_session.id)
+from current_action
+inner join parse_session on current_action.id_parse_session=parse_session.id
+inner join shop_list on shop_list.id=parse_session.id_shop
+where id_parse_result=1
+====================
+
+   ќтобразить магазины, которые имеют в логе сообщени€ указанного типа
+--------------------
+1, 'DEBUG'
+2, 'INFO'
+3, 'WARN'
+4, 'ERROR'
+5, 'TRACE'
+
+select parse_session.id, shop_list.start_page, count(*)
+from current_action
+inner join parse_session on current_action.id_parse_session=parse_session.id
+  inner join shop_list on shop_list.id=parse_session.id_shop
+  inner join logger on logger.id_session=parse_session.id and logger.id_logger_level=4
+group by parse_session.id, shop_list.start_page
+====================
+
+   ќтобразить записи по указанному логу 
+--------------------
+select * from parse_record
+where id_session=399
+====================

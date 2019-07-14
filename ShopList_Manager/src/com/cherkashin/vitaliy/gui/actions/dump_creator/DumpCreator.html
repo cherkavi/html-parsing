@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	</head>
+	<body>
+		<div align="center">
+			<form wicket:id="form_main" >
+				<table width="150px">
+					<thead>
+						<tr>
+							<td colspan="2" align="center">
+								<wicket:message key="title" />
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="2">
+								<input type="submit" wicket:id="button_create_dump" wicket:message="value:create_dump_caption" /> 
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<span wicket:id="dump_was_created" /> 
+							</td>
+						</tr>
+						<tr >
+							<td>
+								<span wicket:id="ftp_server_label" />
+							</td>
+							<td>
+								<input type="text" wicket:id="ftp_server" />   
+							</td>
+						</tr>
+						<tr >
+							<td>
+								<span wicket:id="ftp_user_label" />
+							</td>
+							<td>
+								<input type="text" wicket:id="ftp_user" />   
+							</td>
+						</tr>
+						<tr >
+							<td>
+								<span wicket:id="ftp_password_label" />
+							</td>
+							<td>
+								<input type="password" wicket:id="ftp_password" />   
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" wicket:id="button_copy" wicket:message="value:yes" />
+							</td>
+						</tr>						
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" wicket:id="button_cancel" wicket:message="value:no" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" >
+								<span wicket:id="form_feedback" style="color:red;" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div> 
+	</body>
+</html>

@@ -1,0 +1,6 @@
+-- delete from actions
+-- delete from current_action
+-- delete from logger
+-- delete from parse_record
+-- delete from parse_session
+-- delete from section

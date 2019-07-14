@@ -1,0 +1,12 @@
+======================
+
+Получить все записи в таблице ParseResult по указанному магазину 
+----------------------
+select * from parse_record
+where parse_record.id_session in (select id from parse_session where parse_session.id_shop=212)
+======================
+
+Получить номер магазина для предыдущего запроса 
+----------------------
+select * from shop_list where shop_list.start_page like '%daikin%'
+======================

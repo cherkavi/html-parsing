@@ -1,0 +1,51 @@
+-- select * from actions
+-- select * from current_action
+-- select * from logger
+-- select * from parse_record
+-- select * from parse_session
+-- select * from section
+
+-- delete from actions
+-- delete from current_action
+-- delete from logger
+-- delete from parse_record
+-- delete from parse_session
+-- delete from section
+
+
+-- select count(*) from shop_list
+
+========================================================================================
+все текущие current_action
+----------------------------------------------------------------------------------------
+select * from current_action
+inner join parse_session on parse_session.id=current_action.id_parse_session
+order by actions.id desc
+----------------------------------------------------------------------------------------
+
+========================================================================================
+Детальный список всех Actions
+----------------------------------------------------------------------------------------
+select current_action.id id,
+       shop_list.start_page shop_list_start_page,
+       parse_session.id id_session,
+       parse_session.parse_begin parse_begin,
+       parse_result.name parse_result_name,
+       (select count(*) from parse_record where id_session=parse_session.id) parse_record_count,
+       (select count(*) from logger where id_logger_level=4 and id_session=parse_session.id) logger_error_count
+from current_action
+inner join shop_list on shop_list.id=current_action.id_shop
+left join parse_session on parse_session.id=current_action.id_parse_session
+left join parse_result on parse_result.id=parse_session.id_parse_result
+where current_action.id_actions=7
+----------------------------------------------------------------------------------------
+
+
+========================================================================================
+Получить все логгеры по указанному current_action.id
+----------------------------------------------------------------------------------------
+select logger.logger_message, parse_session.id from logger
+inner join parse_session on parse_session.id=logger.id_session
+inner join current_action on current_action.id_parse_session=parse_session.id
+and current_action.id=299
+----------------------------------------------------------------------------------------

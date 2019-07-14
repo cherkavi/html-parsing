@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	</head>
+	<body>
+		<div align="center">
+			<form wicket:id="form_main" >
+				<table width="150px">
+					<thead>
+						<tr>
+							<td colspan="2" align="center">
+								<wicket:message key="title" />
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="2" align="center" >
+								<wicket:message key="question" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" wicket:id="button_delete" wicket:message="value:yes" />
+							</td>
+							<td>
+								<input type="submit" wicket:id="button_cancel" wicket:message="value:no" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div> 
+	</body>
+</html>

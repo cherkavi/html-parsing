@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div align="center">
+			<a wicket:id="dump_creator">
+				<wicket:message key="create_dump" />
+			</a> 
+			<form wicket:id="form_main" >
+				<table border="1" width="460px" cellspacing="0" cellpadding="1">
+					<thead style="background-color: #EEEEEE" >
+						<tr>
+							<th colspan="6" align="center">
+								ACTIONS
+							</th>
+						</tr>
+						<tr>
+							<th width="60" ><wicket:message key="column_delete" /> </th>
+							<th width="30" ><wicket:message key="column_id" /> </th>
+							<th><wicket:message key="column_date" /> </th>
+							<th width="120" ><wicket:message key="column_state" /> </th>
+							<th width="60" ><wicket:message key="column_manage" /> </th>
+							<th width="60"><wicket:message key="column_statistics" /> </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="actions_list">
+							<td align="center" >
+								<input type="submit" wicket:id="button_delete" wicket:message="value:button_remove" />
+							</td>
+							<td>
+								<span wicket:id="actions_id" />
+							</td>
+							<td>
+								<span wicket:id="actions_date" />
+							</td>
+							<td>
+								<span wicket:id="actions_state" />
+							</td>
+							<td align="center" >
+								<span wicket:id="panel_manage" />
+							</td>
+							<td align="center" >
+								<a wicket:id="link_statistics" >
+									<wicket:message key="statistics" />
+								</a>  
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<input type="submit" wicket:id="button_new" value="NEW" />   
+				</div>
+				<hr />
+				<div align="right">
+					<input type="submit" wicket:id="button_reset" value="delete all data" />
+				</div>
+			</form>
+		</div> 
+	</body>
+</html>

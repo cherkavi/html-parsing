@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div align="center">
+			<form wicket:id="form_main" >
+				<table width="150px">
+					<tr>
+						<td>
+							<div>
+								Destination
+							</div>
+							<select multiple="multiple" wicket:id="list_destination" style="width:200px; height:350px;">
+							</select>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>
+										<input type="submit" value="&lt add" wicket:id="list_add" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="submit" value="remove &gt" wicket:id="list_remove" />
+									</td>
+								</tr>
+							</table>							
+						</td>
+						<td>
+							<div>
+								Source
+							</div>
+							<select multiple="multiple" wicket:id="list_source" style="width:200px; height: 350px;">
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<span wicket:id="form_feedback" /> 
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" align="center">
+							<table>
+								<tr>
+									<td>
+										<input type="submit" wicket:id="button_ok" value="ok" style="width:100px;" />		
+									</td>
+									<td>
+										<input type="submit" wicket:id="button_cancel" value="cancel" style="width:75px;"  />		
+									</td>
+								</tr>
+							</table>							
+						</td>
+					</tr>
+				</table>
+				
+			</form>
+		</div> 
+	</body>
+</html>

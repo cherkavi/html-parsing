@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<style type="text/css">
+			.list_header{
+				background: gray;
+				border: thin black solid;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1">
+			<tr class="list_header">
+				<td colspan="2"> <span wicket:id="title" /> </td>
+			</tr>
+			<tr>
+				<td colspan="2"> <hr /> </td>
+			</tr>
+			
+			<tr wicket:id="list">
+				<td wicket:id="level"> </td>
+				<td wicket:id="message" > </td>
+			</tr>
+		</table>
+	</body>
+</html>

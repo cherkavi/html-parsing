@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <servlet-name>wicket</servlet-name>
+    <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+    <init-param>
+      <param-name>applicationClassName</param-name>
+      <param-value>com.cherkashin.vitaliy.application.ShopListApplication</param-value>
+    </init-param>
+    <init-param>
+      <param-name>configuration</param-name>
+      <!-- deployment, development  -->
+      <param-value>development</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>parser_thread_count</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    
+    <!--  database UNIX  -->
+    <init-param>
+      <param-name>unix_database_host</param-name>
+      <param-value>127.0.0.1</param-value>
+    </init-param>
+    <init-param>
+    	<!--  Firebird, MySQL, Oracle -->
+      <param-name>unix_database_driver</param-name>
+      <param-value>MySQL</param-value>
+    </init-param>
+    <init-param>
+      <param-name>unix_database_login</param-name>
+      <param-value>technik</param-value>
+    </init-param>
+    <init-param>
+      <param-name>unix_database_password</param-name>
+      <param-value>technik</param-value>
+    </init-param>
+    <init-param>
+      <param-name>unix_shop_list_folder</param-name>
+      <param-value>v:\eclipse_workspace\TempParser\bin\shops\</param-value>
+    </init-param>
+    <init-param>
+      <param-name>unix_http_shutdown</param-name>
+      <param-value>D:\eclipse_workspace\ShopList_Manager\add_soft_for_install\TomcatCloser.exe</param-value>
+    </init-param>
+    <init-param>
+      <param-name>unix_parser_temp_folder</param-name>
+      <param-value>C:\temp_parser\</param-value>
+    </init-param>
+    
+
+    <!--  database WINDOWS -->
+    <init-param>
+      <param-name>windows_database_host</param-name>
+      <param-value>127.0.0.1</param-value>
+    </init-param>
+    <init-param>
+    	<!--  Firebird, MySQL, Oracle -->
+      <param-name>windows_database_driver</param-name>
+      <param-value>MySQL</param-value>
+    </init-param>
+    <init-param>
+      <param-name>windows_database_login</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>windows_database_password</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>windows_shop_list_folder</param-name>
+      <param-value>v:\eclipse_workspace\TempParser\bin\shops\</param-value>
+    </init-param>
+    <init-param>
+      <param-name>windows_http_shutdown</param-name>
+      <param-value>D:\eclipse_workspace\ShopList_Manager\add_soft_for_install\TomcatCloser.exe</param-value>
+    </init-param>
+    <init-param>
+      <param-name>windows_parser_temp_folder</param-name>
+      <param-value>C:\temp_parser\</param-value>
+    </init-param>
+
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>wicket</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+
+	<session-config>
+  		<session-timeout>600</session-timeout>
+	</session-config>
+</web-app>
