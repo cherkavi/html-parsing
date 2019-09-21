@@ -1,4 +1,4 @@
-Two my own startups that I tried to spin up
+**Two** my own startups, based on parsing/scraping html, that I tried to spin up
 # E-shops parser ( 2010..2012 )
 collect information ( scraping ) from different e-shops and represent it on one resource
 * ShopList_HtmlParser
@@ -16,3 +16,7 @@ Proposition for investors ( russian language )
 
 # women
 parsing faces ( with recognition ) from dating resources
+> a lot of improvements in approach ( using OSGi framework, face recognitions... )
+![sub-modules](https://i.postimg.cc/MTKjqxrp/woman-projects.png)
+![process](https://i.postimg.cc/xCxNd7Wy/woman-parser-process.png)
+![services](https://i.postimg.cc/XqrGBLWM/woman-parser-soa.png)
